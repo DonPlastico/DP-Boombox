@@ -99,7 +99,7 @@ El archivo config.lua te permite personalizar el script según tus necesidades.
 <summary><h2 align="center">⚙️ Mostrar configuración</h2></summary>
 
 <h3>config.lua</h3>
-<img width="400" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/XNDr6BY.png" />
+<img width="600" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/XNDr6BY.png" />
 
 | Archivo        | Función Principal                                                                                        |
 | -------------- | -------------------------------------------------------------------------------------------------------- |
@@ -114,15 +114,15 @@ Aquí tienes una lista de las vistas previas de tu script.
 <p align="center">
 <summary><h2 align="center">Interfaz de Usuario NUI</h2></summary>
 
-<img width="250" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/S1YQu5t.png" />
+<img width="400" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/S1YQu5t.png" />
 
-<img width="250" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/9gQU6HF.png" />
+<img width="400" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/9gQU6HF.png" />
 
-<img width="350" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/3prOjLG.png" />
+<img width="400" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/3prOjLG.png" />
 
-<img width="350" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/B5q0A5G.png" />
+<img width="400" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/B5q0A5G.png" />
 
-<img width="350" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/xKRcT8D.png" />
+<img width="400" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/xKRcT8D.png" />
 
 </p>
 </details>
@@ -130,15 +130,15 @@ Aquí tienes una lista de las vistas previas de tu script.
 <p align="center">
 <summary><h2 align="center">SQL</h2></summary>
 
-<img width="250" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/3KzPPwN.png" />
+<img width="400" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/3KzPPwN.png" />
 
-<img width="250" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/XNZB0V3.png" />
+<img width="400" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/XNZB0V3.png" />
 
-<img width="250" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/K6aXl2N.png" />
+<img width="400" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/K6aXl2N.png" />
 
-<img width="250" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/Nn4Gjcy.png" />
+<img width="400" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/Nn4Gjcy.png" />
 
-<img width="250" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/X9pknPD.png" />
+<img width="400" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/X9pknPD.png" />
 
 </p>
 </details>
