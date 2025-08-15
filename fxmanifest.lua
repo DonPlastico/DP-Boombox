@@ -1,10 +1,6 @@
 fx_version "cerulean"
-
-description "A boombox script that play yt music by gachaa"
-author "gachaa"
-
+description "Un script de altavoz musical que reproduce música de YouTube"
 lua54 'yes'
-
 games {"gta5"}
 
 ui_page 'web/build/index.html'

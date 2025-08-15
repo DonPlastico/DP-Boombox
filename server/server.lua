@@ -211,7 +211,7 @@ end
 CreateCallback("DP-Boombox:callback:getPlaylists", function(source, cb)
     local license = GetPlayerIdentifierByType(source, 'license')
     MySQL.Async.fetchAll(
-        "SELECT gacha_playlists.id AS playlistId, gacha_playlist_songs.id AS songIdInPlaylist, gacha_playlists.name AS PlaylistName, gacha_songs.url, gacha_songs.name, gacha_songs.author, gacha_songs.maxDuration FROM gacha_playlists_users LEFT JOIN gacha_playlist_songs ON gacha_playlists_users.playlist = gacha_playlist_songs.playlist LEFT JOIN gacha_playlists ON gacha_playlists_users.playlist = gacha_playlists.id LEFT JOIN gacha_songs ON gacha_playlist_songs.song = gacha_songs.id WHERE license = @license",
+        "SELECT dp_listas_repro.id AS playlistId, dp_listas_canciones.id AS songIdInPlaylist, dp_listas_repro.name AS PlaylistName, dp_canciones.url, dp_canciones.name, dp_canciones.author, dp_canciones.maxDuration FROM dp_listas_jugadores LEFT JOIN dp_listas_canciones ON dp_listas_jugadores.playlist = dp_listas_canciones.playlist LEFT JOIN dp_listas_repro ON dp_listas_jugadores.playlist = dp_listas_repro.id LEFT JOIN dp_canciones ON dp_listas_canciones.song = dp_canciones.id WHERE license = @license",
         {
             ['@license'] = license
         }, function(results)
@@ -257,27 +257,27 @@ CreateCallback("DP-Boombox:callback:getNewPlaylist", function(source, cb, data)
     if data == '' then
         data = Config.Translations.newPlaylist
     end
-    local idPlaylist = MySQL.insert.await('INSERT INTO gacha_playlists (name, owner) VALUES (?, ?)', {data, license})
-    local idPlaylistUser = MySQL.insert.await('INSERT INTO gacha_playlists_users (playlist, license) VALUES (?, ?)',
+    local idPlaylist = MySQL.insert.await('INSERT INTO dp_listas_repro (name, owner) VALUES (?, ?)', {data, license})
+    local idPlaylistUser = MySQL.insert.await('INSERT INTO dp_listas_jugadores (playlist, license) VALUES (?, ?)',
         {idPlaylist, license})
     cb(idPlaylist)
 end)
 
 RegisterNetEvent('DP-Boombox:server:addSong', function(data)
     local src = source
-    MySQL.Async.fetchAll("SELECT id FROM gacha_songs WHERE url = @url", {
+    MySQL.Async.fetchAll("SELECT id FROM dp_canciones WHERE url = @url", {
         ['@url'] = data.url
     }, function(results)
         if results[1] and results[1].id then
             local idSongInPlaylist = MySQL.insert.await(
-                'INSERT INTO gacha_playlist_songs (playlist, song) VALUES (?, ?)', {data.playlistActive, results[1].id})
+                'INSERT INTO dp_listas_canciones (playlist, song) VALUES (?, ?)', {data.playlistActive, results[1].id})
             TriggerClientEvent('DP-Boombox:client:resyncPlaylists', src)
         else
             local idSong = MySQL.insert.await(
-                'INSERT INTO gacha_songs (url, maxDuration, name, author) VALUES (?, ?, ?, ?)',
+                'INSERT INTO dp_canciones (url, maxDuration, name, author) VALUES (?, ?, ?, ?)',
                 {data.url, data.maxDuration, data.name, data.author})
             local idSongInPlaylist = MySQL.insert.await(
-                'INSERT INTO gacha_playlist_songs (playlist, song) VALUES (?, ?)', {data.playlistActive, idSong})
+                'INSERT INTO dp_listas_canciones (playlist, song) VALUES (?, ?)', {data.playlistActive, idSong})
             TriggerClientEvent('DP-Boombox:client:resyncPlaylists', src)
         end
     end)
@@ -286,7 +286,7 @@ end)
 RegisterNetEvent('DP-Boombox:server:deletePlayList', function(data)
     local src = source
     local license = GetPlayerIdentifierByType(src, 'license')
-    MySQL.query('DELETE FROM gacha_playlists_users WHERE playlist = ? and license = ?', {data, license}, function()
+    MySQL.query('DELETE FROM dp_listas_jugadores WHERE playlist = ? and license = ?', {data, license}, function()
         TriggerClientEvent('DP-Boombox:client:resyncPlaylists', src)
     end)
 end)
@@ -294,12 +294,12 @@ end)
 RegisterNetEvent('DP-Boombox:server:importNewPlaylist', function(data)
     local src = source
     local license = GetPlayerIdentifierByType(src, 'license')
-    MySQL.Async.fetchAll("SELECT id FROM gacha_playlists_users WHERE playlist = @playlist and license = @license", {
+    MySQL.Async.fetchAll("SELECT id FROM dp_listas_jugadores WHERE playlist = @playlist and license = @license", {
         ['@playlist'] = tonumber(data),
         ['@license'] = license
     }, function(results)
         if #results < 1 then
-            local id = MySQL.insert.await('INSERT INTO gacha_playlists_users (license, playlist) VALUES (?, ?)',
+            local id = MySQL.insert.await('INSERT INTO dp_listas_jugadores (license, playlist) VALUES (?, ?)',
                 {license, data})
             if id then
                 TriggerClientEvent('DP-Boombox:client:resyncPlaylists', src)
@@ -311,11 +311,11 @@ end)
 RegisterNetEvent('DP-Boombox:server:deleteSongPlaylist', function(data)
     local src = source
     local license = GetPlayerIdentifierByType(src, 'license')
-    MySQL.Async.fetchAll("SELECT owner FROM gacha_playlists WHERE id = @playlist", {
+    MySQL.Async.fetchAll("SELECT owner FROM dp_listas_repro WHERE id = @playlist", {
         ['@playlist'] = tonumber(data.playlist)
     }, function(results)
         if results[1].owner == license then
-            MySQL.query('DELETE FROM gacha_playlist_songs WHERE id = ? and playlist = ?', {data.songId, data.playlist},
+            MySQL.query('DELETE FROM dp_listas_canciones WHERE id = ? and playlist = ?', {data.songId, data.playlist},
                 function()
                     TriggerClientEvent('DP-Boombox:client:resyncPlaylists', src)
                 end)
