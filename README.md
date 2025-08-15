@@ -114,15 +114,15 @@ Aquí tienes una lista de las vistas previas de tu script.
 <p align="center">
 <summary><h2 align="center">Interfaz de Usuario NUI</h2></summary>
 
-<img width="250" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="![alt text](image.png)" />
+<img width="250" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/S1YQu5t.png" />
 
-<img width="250" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="![alt text](image-1.png)" />
+<img width="250" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/9gQU6HF.png" />
 
-<img width="350" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="![alt text](image-2.png)" />
+<img width="350" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/3prOjLG.png" />
 
-<img width="350" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="![alt text](image-3.png)" />
+<img width="350" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/B5q0A5G.png" />
 
-<img width="350" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="![alt text](image-4.png)" />
+<img width="350" height="auto" alt="image" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" src="https://i.imgur.com/xKRcT8D.png" />
 
 </p>
 </details>
