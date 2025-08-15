@@ -62,7 +62,7 @@
 Abre el archivo Insert.sql.<br>
 Copia y pega el contenido en tu base de datos MySQL y ejecútalo para crear la tabla de mascotas/pets.
 (Asegúrate de que tu servidor tenga acceso a la base de datos configurada para mysql-async / ghmattimysql / oxmysql.).<br>
-4. **DAñadir el item speaker** a tu inventario/framework. Para QB-Core, copia y pega el siguiente código en tu archivo qb-core/shared/items.lua:<br>
+4. **DAñadir el item speaker** a tu inventario/framework. Para QB-Core, copia y pega el siguiente código en tu archivo qb-core/shared/items.lua:<br><br>
 speaker = {
     name = "speaker",
     label = "Altavoz",
@@ -75,8 +75,8 @@ speaker = {
     combinable = nil,
     description = "Dispositivo de salida de audio que convierte señales eléctricas en ondas sonoras audibles. Es un componente fundamental en cualquier sistema de reproducción de sonido. En pocas palabras, es un ALTAVOZ BLUETOOTH de toda la vida..."
 },
-
-<img width="300" height="auto" align="center" alt="speaker" src="speaker.png" />
+<br>
+<img width="100" height="auto" align="center" alt="speaker" src="speaker.png" />
 
 </details>
 <br><br>
